@@ -1,0 +1,85 @@
+/* src/components/OnlineChatSupport/OnlineChatSupport.css */
+
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  .main-content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .main-heading {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .intro-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .chat-support-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .chat-support-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-support-content {
+    max-width: 600px;
+    text-align: left;
+    padding: 15px;
+  }
+  
+  .chat-support-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .chat-support-content p {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+  
+  .chat-support-content h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .chat-support-content ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .chat-support-content li {
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+  
+  .start-chat-button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .start-chat-button:hover {
+    background-color: #0056b3;
+  }
+  

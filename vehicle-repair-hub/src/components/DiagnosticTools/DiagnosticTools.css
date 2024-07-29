@@ -1,0 +1,109 @@
+/* src/components/DiagnosticTools/DiagnosticTools.css */
+
+.header {
+    background-color: #343a40;
+    padding: 1rem 0;
+    color: #fff;
+  }
+  
+  .header .navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .diagnostic-tools {
+    padding: 40px;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 2rem auto;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .diagnostic-tools h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .diagnostic-tools h2 {
+    font-size: 2rem;
+    color: #34495e;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+  }
+  
+  .diagnostic-tools h3 {
+    font-size: 1.75rem;
+    color: #4f4f4f;
+    margin-bottom: 15px;
+  }
+  
+  .diagnostic-tools p {
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .symptom-selector {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .symptom-selector label {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .symptom-selector select {
+    padding: 12px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .symptom-selector button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .symptom-selector button:hover {
+    background-color: #2980b9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .diagnosis-result {
+    background-color: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .diagnosis-result h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+  }
+  
+  .diagnosis-result p {
+    margin: 0;
+    color: #555;
+  }
+  
