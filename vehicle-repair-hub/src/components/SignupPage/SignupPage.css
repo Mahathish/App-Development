@@ -1,98 +1,73 @@
-/* General Styles */
+/* src/components/SignupPage/SignupPage.css */
+
 body {
   font-family: Arial, sans-serif;
+  /* background: url('../../assets/background.jpg') no-repeat center center fixed; */
+  background-size: cover;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4; /* Light background color for the whole page */
 }
 
-/* Signup Container */
 .signup-container {
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  background-color: #e9ecef; /* Slightly darker gray background */
-  padding: 20px;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Form Container */
 .signup-form-container {
-  background-color: #fff; /* White background for the form */
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 400px; /* Constrain width for larger screens */
-  text-align: center;
+  max-width: 400px;
+  text-align: center; /* Center text alignment */
 }
 
-/* Form Heading */
-.signup-form-container h1 {
-  font-size: 28px;
+.signup-form h1 {
   margin-bottom: 20px;
+  font-size: 24px;
   color: #333;
 }
 
-/* Form Styles */
 .signup-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  align-items: center;
+  align-items: center; /* Center form elements */
 }
 
-.form-label {
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  font-weight: bold;
-  color: #555;
+.signup-form label {
   width: 100%;
-  text-align: left;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: left; /* Align label text to the left */
 }
 
-.form-input {
+.signup-form input {
   padding: 10px;
-  font-size: 16px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  width: 100%;
-  box-sizing: border-box;
+  width: calc(100% - 20px); /* Full width with padding adjustment */
+  margin-bottom: 15px; /* Ensure spacing between fields */
 }
 
-.form-input.error {
-  border-color: #f00; /* Red border for invalid input */
-}
-
-.submit-button {
-  padding: 10px;
+.signup-form button {
+  padding: 10px 15px;
   background-color: #007bff;
   color: #fff;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
-  width: 100%;
-  transition: background-color 0.3s ease;
+  width: 100%; /* Full width button */
 }
 
-.submit-button:hover {
+.signup-form button:hover {
   background-color: #0056b3;
 }
 
-/* Error Message */
-.error-message {
-  color: #f00;
-  font-size: 14px;
-  margin-top: -10px;
-  margin-bottom: 15px;
-}
-
-/* Login Link */
 .login-link {
-  margin-top: 20px;
-  font-size: 16px;
+  margin-top: 15px;
 }
 
 .login-link a {
@@ -102,9 +77,4 @@ body {
 
 .login-link a:hover {
   text-decoration: underline;
-}
-
-/* Footer styling */
-footer {
-  margin-top: 20px;
 }

@@ -1,65 +1,69 @@
-.footer {
-    background-color: #504d4d;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .footer-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .footer-logo h2 {
-    margin: 0;
-    font-size: 24px;
-  }
-  
-  .footer-links {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-    display: flex;
-    gap: 15px;
-  }
-  
-  .footer-links li {
-    margin: 0;
-  }
-  
-  .footer-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
-  }
-  
-  .footer-links a:hover {
-    color: #ddd;
-  }
-  
-  .footer-social {
-    margin: 10px 0;
-  }
-  
-  .footer-social a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 0 10px;
-    transition: color 0.3s;
-  }
-  
-  .footer-social a:hover {
-    color: #ddd;
-  }
-  
-  .footer-copy {
-    margin: 10px 0 0;
-    font-size: 14px;
-  }
-  
+/* Ensure the footer is positioned correctly */
+footer {
+  background-color: #282c34; /* Dark background for contrast */
+  color: #ffffff; /* Light text color for readability */
+  padding: 40px 20px; /* Adequate padding for spacing */
+  border-top: 1px solid #444; /* Subtle border for separation */
+  position: relative; /* Ensure correct positioning */
+  bottom: 0;
+  width: 100%;
+}
+
+/* Container for footer content */
+footer .container {
+  max-width: 1200px; /* Align with your main content width */
+  margin: 0 auto; /* Center the footer content */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Distribute space between items */
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+/* Style for footer sections */
+footer .footer-section {
+  flex: 1; /* Allow sections to grow */
+  margin: 0 10px; /* Spacing between sections */
+}
+
+/* Style for headings */
+footer h6 {
+  font-size: 1.2em; /* Slightly larger font size */
+  margin-bottom: 20px; /* Space below headings */
+}
+
+/* Style for paragraph text */
+footer p {
+  font-size: 0.9em; /* Smaller font size for content */
+  line-height: 1.6; /* Improve readability */
+  margin-bottom: 20px; /* Space below paragraphs */
+}
+
+/* Style for links */
+footer a {
+  color: #61dafb; /* Light blue color for links */
+  text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Style for social media icons */
+footer .social-media {
+  display: flex;
+  gap: 15px; /* Space between icons */
+}
+
+footer .social-media a {
+  color: #61dafb; /* Match link color */
+}
+
+footer .social-media a:hover {
+  color: #ffffff; /* Change color on hover */
+}
+
+/* Style for copyright text */
+footer .copyright {
+  text-align: center; /* Center the text */
+  margin-top: 20px; /* Space above the text */
+  font-size: 0.8em; /* Smaller font size */
+}

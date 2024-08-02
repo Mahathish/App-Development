@@ -1,0 +1,143 @@
+/* ProfilePage.css */
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --background-color: #f4f6f8;
+    --white: #fff;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+  }
+  
+  .profile-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .profile-dashboard-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  .sidebar h2 {
+    margin-top: 0;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-menu a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .profile-content {
+    flex: 1;
+    padding: 20px;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    border-radius: 8px;
+  }
+  
+  .profile-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 15px;
+  }
+  
+  .profile-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+  }
+  
+  .profile-info {
+    margin-bottom: 20px;
+  }
+  
+  .profile-info h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+  }
+  
+  .info-item {
+    margin-bottom: 10px;
+  }
+  
+  .info-item strong {
+    display: inline-block;
+    width: 120px;
+    color: var(--secondary-color);
+  }
+  
+  .info-item span {
+    color: #555;
+  }
+  
+  .profile-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .btn-edit, .btn-back {
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-edit {
+    background-color: #007bff;
+    margin-right: 10px;
+  }
+  
+  .btn-back {
+    background-color: #6c757d;
+  }
+  
+  .btn-edit:hover, .btn-back:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Navbar and Footer styles */
+  .navbar, .footer {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .navbar a, .footer a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1rem;
+  }
+  
+  .navbar a:hover, .footer a:hover {
+    text-decoration: underline;
+  }
+  

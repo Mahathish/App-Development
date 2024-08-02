@@ -1,67 +1,48 @@
 /* Navbar styles */
 .navbar {
-  background-color: #343a40;
-  color: #ffffff;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar-container {
-  display: flex;
-  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px; /* Adjust padding as needed */
+  position: fixed;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Aligns children to the ends of the navbar */
+  align-items: center; /* Centers items vertically */
 }
 
 .navbar-logo {
-  color: #ffffff;
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 24px;
+  color: #61dafb;
   text-decoration: none;
 }
 
 .navbar-menu {
+  display: flex;
+  justify-content: flex-end; /* Align menu items to the right */
+  flex-grow: 1; /* Takes up remaining space to push items to the right */
+}
+
+.navbar-menu ul {
   list-style: none;
   display: flex;
+  gap: 20px; /* Space between menu items */
   margin: 0;
-  padding: 0;
 }
 
-.navbar-item {
-  margin-left: 20px;
+.navbar-menu li {
+  margin: 0;
 }
 
-.navbar-link {
-  color: #ffffff;
+.navbar-menu a {
+  color: white;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 16px;
   transition: color 0.3s;
 }
 
-.navbar-link:hover {
-  color: #007bff;
-}
-
-/* Responsive design */
-@media (max-width: 768px) {
-  .navbar-menu {
-    flex-direction: column;
-    display: none;
-  }
-
-  .navbar-menu.active {
-    display: flex;
-  }
-
-  .navbar-item {
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-
-  .navbar-item:last-child {
-    margin-bottom: 0;
-  }
+.navbar-menu a:hover {
+  color: #61dafb;
 }

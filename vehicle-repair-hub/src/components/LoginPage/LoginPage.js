@@ -1,69 +1,60 @@
 import React, { useState } from 'react';
-import './LoginPage.css'; // Ensure this CSS file is updated
-import Navbar from '../Navbar/Navbar'; // Import Navbar if needed
-import Footer from '../Footer/Footer'; // Import Footer if needed
+import { useNavigate } from 'react-router-dom';
+import './LoginPage.css';
+import Navbar from '../Navbar/Navbar';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [emailError, setEmailError] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validateEmail(email)) {
-      setEmailError('Please enter a valid email address.');
-      return;
-    }
-    setEmailError('');
-    // Add your login logic here
-    // Redirect to the home page after successful login
-    window.location.href = '/home';
-  };
 
-  const validateEmail = (email) => {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
+    // Example authentication logic - replace with your own logic
+    if (email === 'admin@example.com' && password === 'admin') {
+      localStorage.setItem('userRole', 'admin');
+      navigate('/admin-dashboard');
+    } else if (email === 'user@example.com' && password === 'user') {
+      localStorage.setItem('userRole', 'user');
+      navigate('/user-dashboard');
+    } else {
+      setError('Invalid email or password');
+    }
   };
 
   return (
     <>
-      <Navbar />
-      <div className="login-container">
-        <div className="login-form-container">
-          <h1>Login</h1>
-          <form onSubmit={handleSubmit} className="login-form">
-            <label className="form-label">
-              Email:
-              <input 
-                type="email" 
-                value={email} 
-                onChange={(e) => setEmail(e.target.value)} 
-                required 
-                className={`form-input ${emailError ? 'error' : ''}`}
-                placeholder="Enter your email"
-              />
-            </label>
-            {emailError && <p className="error-message">{emailError}</p>}
-            <label className="form-label">
-              Password:
-              <input 
-                type="password" 
-                value={password} 
-                onChange={(e) => setPassword(e.target.value)} 
-                required 
-                className="form-input"
-                placeholder="Enter your password"
-              />
-            </label>
-            <button type="submit" className="submit-button">Login</button>
-          </form>
+    <Navbar />
+    <div className="login-container">
+      <div className="login-box">
+        <h1>Login</h1>
+        {error && <p className="error-message">{error}</p>}
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">Login</button>
           <p className="signup-link">
             Don't have an account? <a href="/signup">Sign up</a>
           </p>
-        </div>
+        </form>
       </div>
-      {/* <Footer /> */}
-    </>
+    </div></>
   );
 };
 

@@ -1,98 +1,73 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4; /* Light background color for the whole page */
-}
-
-/* Login Container */
+/* General container styles */
 .login-container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   min-height: 100vh;
-  background-color: #f0f0f0; /* Light gray background */
-  padding: 20px;
+  background: url('../../assets/background.jpg') no-repeat center center fixed; /* Add your image path */
+  background-size: cover; /* Cover the entire container */
 }
 
-/* Form Container */
-.login-form-container {
-  background-color: #fff; /* White background for the form */
-  padding: 40px;
+/* Login box styles */
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px; /* Constrain width for larger screens */
-  text-align: center;
-}
-
-/* Form Heading */
-.login-form-container h1 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-/* Form Styles */
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  align-items: center;
-}
-
-.form-label {
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  font-weight: bold;
-  color: #555;
-  width: 100%;
-  text-align: left;
-}
-
-.form-input {
-  padding: 10px;
-  font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  width: 100%;
+  padding: 20px;
   box-sizing: border-box;
 }
 
-.form-input.error {
-  border-color: #f00; /* Red border for invalid input */
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+  color: #333;
 }
 
-.submit-button {
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #555;
+}
+
+input {
   padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
   background-color: #007bff;
   color: #fff;
   border: none;
+  padding: 10px;
   border-radius: 4px;
-  cursor: pointer;
   font-size: 16px;
-  width: 100%;
+  cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-.submit-button:hover {
+button:hover {
   background-color: #0056b3;
 }
 
-/* Error Message */
 .error-message {
-  color: #f00;
-  font-size: 14px;
-  margin-top: -10px;
+  color: #e74c3c;
   margin-bottom: 15px;
+  text-align: center;
 }
 
-/* Sign-up Link */
 .signup-link {
-  margin-top: 20px;
-  font-size: 16px;
+  text-align: center;
 }
 
 .signup-link a {
@@ -102,9 +77,4 @@ body {
 
 .signup-link a:hover {
   text-decoration: underline;
-}
-
-/* Footer styling */
-footer {
-  margin-top: 20px;
 }

@@ -1,36 +1,84 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Navbar.css'; // Import custom CSS
+import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const userRole = localStorage.getItem('userRole');
+
+  const handleLogout = () => {
+    // Clear user data from local storage
+    localStorage.removeItem('userRole');
+    // Redirect to the home page or login page
+    navigate('/login'); // Change this to '/' if you prefer redirecting to the home page
+  };
+
   return (
-    <nav className="navbar">
-      <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-          Vehicle Repair Hub
-        </Link>
-        <ul className="navbar-menu">
-          <li className="navbar-item">
-            <Link to="/home" className="navbar-link">Home</Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/login" className="navbar-link">Login</Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/signup" className="navbar-link">Sign Up</Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/contact" className="navbar-link">Contact</Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/aboutus" className="navbar-link">About Us</Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/dashboard" className="navbar-link">DashBoard</Link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <AppBar position="static" sx={{ backgroundColor: '#333' }}>
+      <Toolbar>
+        <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          <Link to="/" style={{ color: '#61dafb', textDecoration: 'none' }}>
+            Vehicle Repair Hub
+          </Link>
+        </Typography>
+        <Box sx={{ display: 'flex', gap: 2 }}>
+          {userRole ? (
+            <>
+              {userRole === 'admin' && (
+                <Button
+                  color="inherit"
+                  component={Link}
+                  to="/admin-dashboard"
+                  sx={{ textDecoration: 'none' }}
+                >
+                
+                </Button>
+              )}
+              {userRole === 'user' && (
+                <Button
+                  color="inherit"
+                  component={Link}
+                  to="/user-dashboard"
+                  sx={{ textDecoration: 'none' }}
+                >
+                  
+                </Button>
+              )}
+              <Button color="inherit" onClick={handleLogout}>
+                Logout
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button
+                color="inherit"
+                component={Link}
+                to="/home"
+                sx={{ textDecoration: 'none' }}
+              >
+                Home
+              </Button>
+              <Button
+                color="inherit"
+                component={Link}
+                to="/login"
+                sx={{ textDecoration: 'none' }}
+              >
+                Login
+              </Button>
+              <Button
+                color="inherit"
+                component={Link}
+                to="/signup"
+                sx={{ textDecoration: 'none' }}
+              >
+                Sign Up
+              </Button>
+            </>
+          )}
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
 };
 

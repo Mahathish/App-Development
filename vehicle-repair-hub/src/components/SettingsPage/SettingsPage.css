@@ -1,0 +1,98 @@
+.settings-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .settings-dashboard-container {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sidebar-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #343a40;
+  }
+  
+  .sidebar-menu {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar-menu li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-link {
+    text-decoration: none;
+    color: #495057;
+    font-size: 1.1rem;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .sidebar-link.active {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .settings-content {
+    flex: 1;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+  }
+  
+  .settings-header {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .settings-header h1 {
+    font-size: 2rem;
+    color: #343a40;
+    margin: 0;
+  }
+  
+  .settings-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  
+  .setting-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .setting-label {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    color: #495057;
+  }
+  
+  .setting-label input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .setting-text {
+    font-size: 1rem;
+    color: #495057;
+  }
+  
