@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css';
 import heroImage from '../../assets/hero-image.jpg';
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 
@@ -39,57 +38,49 @@ const HomePage = () => {
                 className="search-input"
                 aria-label="Search"
               />
-              <button type="submit" className="search-button" aria-label="Search">
-                <i className="fas fa-search"></i>
-              </button>
             </div>
           </form>
           <button className="hero-button" onClick={handleLearnMore}>Explore a World of Repair</button>
         </div>
       </header>
       <main className="main-content">
-        <section className="overview">
-          <h2 className="section-title">Why Choose Us?</h2>
-          <p className="overview-description">
+        <section className="cards-section">
+          <div className="card">
+            <h3 className="card-title">Card 1</h3>
+            <p className="card-description">Description for card 1.</p>
+          </div>
+          <div className="card">
+            <h3 className="card-title">Card 2</h3>
+            <p className="card-description">Description for card 2.</p>
+          </div>
+          <div className="card">
+            <h3 className="card-title">Card 3</h3>
+            <p className="card-description">Description for card 3.</p>
+          </div>
+        </section>
+        <section className="stats-section">
+          <div className="stat-item">
+            <h3 className="stat-value">109,100</h3>
+            <p className="stat-description">Free Manuals</p>
+          </div>
+          <div className="stat-item">
+            <h3 className="stat-value">220,627</h3>
+            <p className="stat-description">Solutions</p>
+          </div>
+          <div className="stat-item">
+            <h3 className="stat-value">58,172</h3>
+            <p className="stat-description">Devices</p>
+          </div>
+          <div className="stat-item">
+            <h3 className="stat-value">100M+</h3>
+            <p className="stat-description">Repairs</p>
+          </div>
+        </section>
+        <section className="about-section">
+          <h2 className="section-title">About Us</h2>
+          <p className="about-description">
             At Vehicle Repair Hub, we pride ourselves on providing expert guidance, reliable resources, and exceptional customer service. Our team of experienced professionals is dedicated to helping you maintain and repair your vehicle with confidence.
           </p>
-        </section>
-        <section className="services">
-          <h2 className="section-title">Our Services</h2>
-          <div className="services-grid">
-            <div className="service-item">
-              <h3 className="service-title">Repair Guides</h3>
-              <p className="service-description">Detailed guides for common issues.</p>
-            </div>
-            <div className="service-item">
-              <h3 className="service-title">Maintenance Schedules</h3>
-              <p className="service-description">Recommended schedules for vehicle care.</p>
-            </div>
-            <div className="service-item">
-              <h3 className="service-title">Diagnostic Tools</h3>
-              <p className="service-description">Interactive tools to diagnose problems.</p>
-            </div>
-            <div className="service-item">
-              <h3 className="service-title">Parts & Tools Recommendations</h3>
-              <p className="service-description">Find the best parts and tools for repairs.</p>
-            </div>
-            <div className="service-item">
-              <h3 className="service-title">User-Submitted Solutions</h3>
-              <p className="service-description">Share and learn from others' repair stories.</p>
-            </div>
-            <div className="service-item">
-              <h3 className="service-title">Local Repair Shop Directory</h3>
-              <p className="service-description">Find trusted local repair shops and mechanics.</p>
-            </div>
-          </div>
-        </section>
-        <section className="contact">
-          <h2 className="section-title">Connect with Us</h2>
-          <div className="social-media">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebook size={40} /></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter size={40} /></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram size={40} /></a>
-          </div>
         </section>
       </main>
       <Footer />

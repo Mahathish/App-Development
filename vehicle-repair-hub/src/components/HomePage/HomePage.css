@@ -1,24 +1,23 @@
-/* HomePage.css */
-
+/* General Styles */
 body {
-  font-family: 'Arial', sans-serif; /* Use a clean, professional font */
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #333; /* Default text color */
+  color: #333;
 }
 
 .hero {
   position: relative;
-  height: 600px; /* Height for a more impactful hero section */
+  height: 600px;
   overflow: hidden;
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the entire area */
-  filter: brightness(0.5); /* Darkens the image for better text visibility */
+  object-fit: cover;
+  filter: brightness(0.5);
 }
 
 .hero-content {
@@ -29,36 +28,36 @@ body {
   text-align: center;
   color: #fff;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better text contrast */
-  border-radius: 10px; /* Rounded corners for a softer look */
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
 }
 
 .hero-title {
-  font-size: 3.5rem; /* Larger font size for the title */
+  font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
-  font-size: 1.8rem; /* Larger subtitle for emphasis */
+  font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
 
 .hero-button {
-  background-color: #007bff; /* Primary button color */
+  background-color: #333;
   color: white;
   border: none;
-  padding: 12px 24px; /* Increased padding for a more substantial button */
+  padding: 12px 24px;
   font-size: 1.2rem;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 10px; /* Space between search bar and button */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-top: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .hero-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #555;
 }
 
 /* Search Bar Styles */
@@ -66,17 +65,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px; /* Space from the subtitle */
+  margin-top: 20px;
 }
 
 .search-input-container {
   display: flex;
   align-items: center;
   background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 2px solid #ccc;
+  border-radius: 30px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 400px; /* Fixed width for the search bar */
+  width: 400px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.search-input-container:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .search-input {
@@ -84,90 +89,100 @@ body {
   padding: 12px;
   border: none;
   font-size: 1rem;
-  outline: none; /* Remove outline on focus */
-  border-radius: 5px 0 0 5px; /* Rounded corners on the left */
-}
-
-.search-button {
-  background-color: #007bff; /* Button color */
-  color: #fff;
-  border: none;
-  padding: 12px 16px;
-  border-radius: 0 5px 5px 0; /* Rounded corners on the right */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.search-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  outline: none;
+  border-radius: 30px;
 }
 
 .main-content {
-  padding: 3rem 2rem; /* Responsive padding */
+  padding: 3rem 2rem;
 }
 
 .section-title {
-  font-size: 2.5rem; /* Increased font size for section titles */
+  font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  text-align: center; /* Center align section titles */
-  color: #333; /* Darker color for better readability */
+  text-align: center;
+  color: #333;
 }
 
-.overview-description {
-  font-size: 1.2rem;
-  line-height: 1.6;
+/* Cards Section */
+.cards-section {
+  display: flex;
+  justify-content: space-around;
   margin-bottom: 2rem;
-  text-align: center; /* Center align overview description */
-  color: #555; /* Softer color for description */
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
-  grid-gap: 20px;
-  margin-top: 20px;
-}
-
-.service-item {
-  background-color: #f8f9fa; /* Light background for service items */
+.card {
+  background-color: #f8f9fa;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  text-align: center; /* Center align service items */
-  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-item:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.service-title {
+.card-title {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.service-description {
+.card-description {
   font-size: 1rem;
   line-height: 1.5;
 }
 
-.contact {
-  margin-top: 3rem;
-  text-align: center; /* Center align contact section */
+/* Statistics Section */
+.stats-section {
+  background-color: #007bff; /* Background color for emphasis */
+  color: #fff; /* White text color */
+  padding: 2rem 0; /* Padding for spacing */
+  text-align: center; /* Center align text */
+  border-radius: 10px; /* Rounded corners for the section */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  margin-bottom: 2rem; /* Space below the stats section */
 }
 
-.social-media {
-  margin-top: 1rem; /* Space above social media icons */
+.stat-item {
+  display: inline-block;
+  width: 22%; /* Fixed width for each stat item */
+  margin: 0 1%; /* Margin for spacing */
+  padding: 1rem;
+  border-radius: 10px; /* Rounded corners for stat items */
+  background-color: #fff; /* White background for contrast */
+  color: #007bff; /* Text color matching the section background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.social-media a {
-  color: #007bff; /* Social media icon color */
-  margin: 0 1rem;
-  transition: color 0.3s ease;
+.stat-item:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-.social-media a:hover {
-  color: #0056b3; /* Darker blue on hover */
+.stat-value {
+  font-size: 2.5rem; /* Larger font size for values */
+  font-weight: bold;
+}
+
+.stat-description {
+  font-size: 1.2rem; /* Larger font size for descriptions */
+  color: #555; /* Softer color for descriptions */
+}
+
+/* About Section */
+.about-section {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #f8f9fa;
+}
+
+.about-description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
 }
