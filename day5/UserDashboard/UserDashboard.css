@@ -1,0 +1,202 @@
+:root {
+  --primary-color: #007bff; /* Primary color for highlights */
+  --secondary-color: #343a40; /* Darker shade for text */
+  --background-color: #f8f9fa; /* Light background color */
+  --white: #ffffff; /* White background */
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  --border-radius: 8px; /* Rounded corners */
+  --padding: 16px; /* Padding for containers */
+  --font-size: 16px; /* Base font size */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family */
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+}
+
+.user-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.profile-dashboard-container {
+  display: flex;
+  flex: 1;
+  margin: var(--padding);
+}
+
+.sidebar {
+  width: 280px; /* Sidebar width */
+  background-color: var(--white);
+  padding: var(--padding);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  margin-right: var(--padding);
+  position: sticky;
+  top: 0; /* Sticky sidebar */
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 16px;
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  display: block;
+  padding: 12px 16px;
+  border-radius: var(--border-radius);
+  transition: background-color 0.3s, color 0.3s, padding-left 0.3s;
+  position: relative;
+}
+
+.sidebar-menu a:hover, .sidebar-menu li.active a {
+  background-color: white;
+  color: var(--white);
+  padding-left: 20px;
+}
+
+.sidebar-menu a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: height 0.3s, background-color 0.3s;
+}
+
+.sidebar-menu a:hover::before, .sidebar-menu li.active a::before {
+  height: 80%;
+  color: #ffffff;
+}
+
+.profile-content {
+  flex: 1;
+  padding: var(--padding);
+  background: var(--white);
+  box-shadow: var(--box-shadow);
+  border-radius: var(--border-radius);
+  margin-left: var(--padding);
+}
+
+.profile-header {
+  margin-bottom: 30px;
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 20px;
+}
+
+.profile-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--secondary-color);
+}
+
+.profile-info, .recent-activities, .settings, .support {
+  margin-bottom: 30px; /* Reduced gap between sections */
+}
+
+.profile-info h2, .recent-activities h2, .settings h2, .support h2 {
+  margin: 0 0 15px 0;
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 10px;
+}
+
+.info-item {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.info-item strong {
+  color: var(--secondary-color);
+}
+
+.info-item span {
+  color: #555;
+}
+
+.recent-activities ul, .support ul {
+  list-style: none;
+  padding: 0;
+}
+
+.recent-activities li, .support li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.profile-actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn-edit, .btn-back {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  color: var(--white);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-edit {
+  background-color: var(--primary-color);
+}
+
+.btn-back {
+  background-color: #6c757d;
+}
+
+.btn-edit:hover {
+  /* background-color: #0056b3; */
+  transform: scale(1.05);
+}
+
+.btn-back:hover {
+  background-color: #5a6268;
+  transform: scale(1.05);
+}
+
+.navbar {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navbar a {
+  color: var(--white);
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1rem;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
